@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8e9ed">
+<title>Mis XV años | Valentina</title>
+<style>
+:root{--rose:#b86f83;--deep:#7f4056;--gold:#c9a45b;--cream:#fffaf7;--ink:#563b43}
+*{box-sizing:border-box}
+body{margin:0;background:#f7edf0;color:var(--ink);font-family:Georgia,'Times New Roman',serif}
+.page{width:min(100%,520px);margin:auto;min-height:100vh;background:linear-gradient(180deg,#fffaf8,#f8e8ed);overflow:hidden;box-shadow:0 0 35px #70404a18}
+.hero{min-height:100vh;padding:26px 22px 34px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative}
+.hero:before,.hero:after{content:"✧";position:absolute;color:var(--gold);font-size:40px;opacity:.8}
+.hero:before{top:24px;left:25px}.hero:after{bottom:25px;right:28px}
+.kicker{letter-spacing:4px;text-transform:uppercase;color:var(--rose);font:12px Arial,sans-serif}
+h1{font-size:clamp(44px,12vw,68px);font-weight:normal;color:var(--deep);margin:12px 0 0}
+.xv{font-size:17px;letter-spacing:7px;color:var(--gold);text-transform:uppercase;margin:4px 0 18px}
+.photo-wrap{width: min(72vw,290px);height:min(82vw,350px);border:5px solid #fff;border-radius:48% 48% 12px 12px;outline:1px solid var(--gold);outline-offset:5px;overflow:hidden;background:linear-gradient(145deg,#f2d9df,#fff5e8);box-shadow:0 14px 35px #74455422;margin:8px 0 24px}
+.photo-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.intro{font-size:18px;line-height:1.55;max-width:360px;margin:0 auto 16px}
+.name{font-size:22px;color:var(--deep);letter-spacing:2px}
+.section{padding:42px 24px;text-align:center;border-top:1px solid #d8bd8b66}
+.section h2{font-weight:normal;font-size:30px;color:var(--deep);margin:0 0 12px}
+.sub{font:12px Arial,sans-serif;letter-spacing:2px;text-transform:uppercase;color:var(--rose)}
+.details{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.detail{padding:18px 10px;background:#fff9;border:1px solid #d5b66f88;border-radius:14px}
+.detail strong{display:block;color:var(--deep);font-size:18px;margin-bottom:6px}
+.detail span{font:13px Arial,sans-serif;line-height:1.4}
+.countdown{display:flex;justify-content:center;gap:9px;margin:20px 0}
+.count{background:#fff;border:1px solid #dfc58f;border-radius:12px;padding:12px 8px;min-width:65px}
+.count b{display:block;font:26px Georgia;color:var(--deep)}
+.count small{font:10px Arial,sans-serif;text-transform:uppercase;color:var(--rose)}
+.actions{display:grid;gap:11px;margin:22px auto 0;max-width:330px}
+.btn{border:0;border-radius:30px;padding:15px 18px;background:var(--deep);color:white;text-decoration:none;font:14px Arial,sans-serif;letter-spacing:.3px;display:block;cursor:pointer}
+.btn.alt{background:transparent;color:var(--deep);border:1px solid var(--gold)}
+.note{font-size:16px;line-height:1.6}
+footer{text-align:center;padding:30px 20px 42px;color:var(--rose);font-size:14px}
+.music{position:fixed;right:16px;bottom:16px;min-width:150px;padding:13px 18px;border-radius:30px;border:1px solid var(--gold);background:#fff;color:var(--deep);font: bold 14px Arial,sans-serif;box-shadow:0 4px 18px #0002;cursor:pointer;z-index:5}
+@media(min-width:600px){body{padding:24px 0}.page{border-radius:22px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <section class="hero">
+    <div class="kicker">Una noche para recordar</div>
+    <div class="xv">Mis quince años</div>
+    <div class="photo-wrap"><img src="valentina.png" alt="Fotografía de Valentina" onerror="this.style.display='none';this.parentElement.innerHTML='<div style=&quot;height:100%;display:grid;place-items:center;padding:25px;color:#8c5968;font:16px Arial&quot;>Coloca aquí la fotografía<br>valentina.png</div>'"></div>
+    <div class="intro">Con la bendición de Dios y el cariño de mi familia, quiero compartir contigo una noche muy especial.</div>
+    <h1>Valentina</h1>
+    <div class="name">¡Mis XV años!</div>
+    <p class="sub" style="margin-top:22px">Tengo el gusto de invitarte</p>
+    <a class="btn alt" href="#detalles">Descubre la invitación ↓</a>
+  </section>
+
+  <section class="section" id="detalles">
+    <div class="sub">Acompáñame a celebrar</div>
+    <h2>Una fecha especial</h2>
+    <p class="note">Tu presencia hará que este día sea aún más inolvidable.</p>
+    <div class="details">
+      <div class="detail"><strong>Fecha</strong><span>Por confirmar</span></div>
+      <div class="detail"><strong>Hora</strong><span>Por confirmar</span></div>
+      <div class="detail" style="grid-column:1/-1"><strong>Lugar</strong><span>Nombre del salón o dirección por confirmar</span></div>
+    </div>
+    <div class="sub">La cuenta regresiva comienza</div>
+    <div class="countdown" id="countdown">
+      <div class="count"><b>--</b><small>Días</small></div>
+      <div class="count"><b>--</b><small>Horas</small></div>
+      <div class="count"><b>--</b><small>Minutos</small></div>
+      <div class="count"><b>--</b><small>Segundos</small></div>
+    </div>
+    <div class="actions">
+      <a class="btn" id="mapBtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=UBICACION_DEL_EVENTO">📍 Cómo llegar</a>
+      <a class="btn alt" id="rsvpBtn" href="https://wa.me/593XXXXXXXXX?text=Hola%2C%20confirmo%20mi%20asistencia%20a%20los%20XV%20de%20Valentina.">💌 Confirmar asistencia</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="sub">Con cariño</div>
+    <h2>¡Te espero!</h2>
+    <p class="note">Será una alegría contar con tu presencia para compartir juntos esta noche mágica.</p>
+    <div style="font-size:30px;color:var(--gold)">✧ ♡ ✧</div>
+  </section>
+  <footer>Con amor, Valentina · Mis XV años</footer>
+</main>
+<audio id="music" src="musica.mp3" preload="auto" loop></audio>
+<button class="music" id="musicBtn" aria-label="Reproducir música" title="Pulsa para escuchar">▶ Reproducir música</button>
+<script>
+// EDITA estos datos cuando tengas la información definitiva:
+const fechaEvento = ""; // Formato: "2027-06-19T19:00:00"
+const ubicacion = "UBICACION_DEL_EVENTO";
+const telefonoWhatsApp = "593XXXXXXXXX"; // Ecuador: 593 + número, sin el 0 inicial
+const mensajeRSVP = "Hola, confirmo mi asistencia a los XV de Valentina.";
+
+const mapBtn=document.getElementById("mapBtn");
+mapBtn.href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(ubicacion);
+document.getElementById("rsvpBtn").href="https://wa.me/"+telefonoWhatsApp+"?text="+encodeURIComponent(mensajeRSVP);
+
+function actualizarCuenta(){
+ const el=document.getElementById("countdown");
+ if(!fechaEvento){el.innerHTML='<p class="note">Pronto podrás ver aquí cuánto falta para la celebración.</p>';return}
+ const distancia=new Date(fechaEvento).getTime()-Date.now();
+ if(distancia<=0){el.innerHTML='<p class="note">¡Llegó el gran día!</p>';return}
+ const unidades=[Math.floor(distancia/86400000),Math.floor(distancia%86400000/3600000),Math.floor(distancia%3600000/60000),Math.floor(distancia%60000/1000)];
+ const labels=["Días","Horas","Minutos","Segundos"];
+ el.innerHTML=unidades.map((n,i)=>`<div class="count"><b>${n}</b><small>${labels[i]}</small></div>`).join("");
+}
+actualizarCuenta();setInterval(actualizarCuenta,1000);
+
+const audio=document.getElementById("music"),musicBtn=document.getElementById("musicBtn");
+audio.addEventListener("error",()=>{musicBtn.textContent="⚠ Revisar musica.mp3";musicBtn.title="No se pudo cargar el archivo de música";});
+musicBtn.addEventListener("click",async()=>{
+ if(audio.paused){
+  try{await audio.play();musicBtn.textContent="Ⅱ Pausar música";musicBtn.title="Pausar música"}
+  catch(e){alert("No se pudo reproducir la música. Verifica que musica.mp3 esté en la misma carpeta que el archivo HTML y que sea un MP3 válido.")}
+ }else{audio.pause();musicBtn.textContent="▶ Reproducir música";musicBtn.title="Activar música"}
+});
+</script>
+</body>
+</html>

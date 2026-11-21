@@ -1,0 +1,8 @@
+INVITACION XV VALENTINA
+
+1. Extrae estos archivos en tu carpeta XV_VALENTINA.
+2. Copia tu archivo musica.mp3 (el que ya tienes) dentro de esta misma carpeta.
+3. Deben quedar juntos: invitacion_xv_valentina_actualizada.html, valentina.png y musica.mp3.
+4. Abre el HTML con Chrome y pulsa el botón "Reproducir música".
+
+La música no se reproduce sola: el navegador requiere que el invitado pulse el botón.
